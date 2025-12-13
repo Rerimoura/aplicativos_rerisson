@@ -141,7 +141,7 @@ with col1:
     </div>
     """, unsafe_allow_html=True)
     
-    st.link_button("Acessar App", "https://vennbiz-yw39zrgmwncx7wyjirzk77.streamlit.app/", use_container_width=True)
+    st.link_button("Acessar App", "https://vennbiz.streamlit.app/", use_container_width=True)
 
 # App 2: Conversor PDF
 with col2:
