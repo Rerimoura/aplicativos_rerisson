@@ -173,7 +173,7 @@ with col3:
     </div>
     """, unsafe_allow_html=True)
     
-    st.link_button("Acessar App", "https://mapsbiz02-z2nfvymzddnmabtzdskkmm.streamlit.app/", use_container_width=True)
+    st.link_button("Acessar App", "Gerador_Rotas", use_container_width=True)
 
 # App 4: Biz Net
 with col4:
@@ -212,6 +212,22 @@ with col5:
     """, unsafe_allow_html=True)
     
     st.link_button("Acessar App", "https://clientessemcomprasigma.streamlit.app/", use_container_width=True)
+
+# App 6: Consulta CNPJ
+with col6:
+    st.markdown("""
+    <div class="app-card">
+        <div>
+            <div class="app-icon">🏢</div>
+            <div class="app-title">Consulta CNPJ</div>
+            <div class="app-desc">
+                Consulta situação cadastral e endereço de CNPJs na base da Receita.
+            </div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.link_button("Acessar App", "https://cnpjsmgconsulta.streamlit.app/", use_container_width=True)
 
 # Rodapé
 st.markdown("""
