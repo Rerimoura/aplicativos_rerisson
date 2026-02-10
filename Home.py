@@ -229,6 +229,22 @@ with col6:
     
     st.link_button("Acessar App", "https://cnpjsmgconsulta.streamlit.app/", use_container_width=True)
 
+# App 7: Simulador Nivea
+with col7:
+    st.markdown("""
+    <div class="app-card">
+        <div>
+            <div class="app-icon">💰</div>
+            <div class="app-title">Simulador Nivea</div>
+            <div class="app-desc">
+                Crie um simulador para cálculo de investimentos nas Top Redes.
+            </div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.link_button("Acessar App", "https://simuladornivea.streamlit.app/", use_container_width=True)
+
 # Rodapé
 st.markdown("""
 <div class="footer">
