@@ -157,7 +157,7 @@ with col2:
     </div>
     """, unsafe_allow_html=True)
     
-    st.link_button("Acessar App", "https://convertepdfexcel-redebiz.streamlit.app/", use_container_width=True)
+    st.link_button("Acessar App", "https://converter-pdf-excel-biz.streamlit.app/", use_container_width=True)
 
 # App 3: Gerador de Rotas
 with col3:
