@@ -173,8 +173,7 @@ with col3:
     </div>
     """, unsafe_allow_html=True)
     
-    if st.button("Acessar App", key="btn_rotas", use_container_width=True):
-        st.switch_page("pages/Gerador_Rotas.py")
+    st.page_link("pages/Gerador_Rotas.py", label="Acessar App", use_container_width=True)
 
 # App 4: Biz Net
 with col4:
@@ -190,8 +189,7 @@ with col4:
     </div>
     """, unsafe_allow_html=True)
     
-    if st.button("Acessar App", key="btn_biznet", use_container_width=True):
-        st.switch_page("pages/Biz_Net.py")
+    st.page_link("pages/Biz_Net.py", label="Acessar App", use_container_width=True)
 
 # Espaçamento entre linhas
 st.markdown("<br>", unsafe_allow_html=True)
