@@ -103,6 +103,28 @@ st.markdown("""
         box-shadow: 0 5px 15px rgba(75, 108, 183, 0.4);
     }
     
+    /* st.page_link - iguala visual ao link_button */
+    [data-testid="stPageLink"] a, [data-testid="stPageLink"] a:visited {
+        background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+        color: white !important;
+        border: none;
+        padding: 0.6rem 1.5rem;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+    }
+    [data-testid="stPageLink"] a:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(75, 108, 183, 0.4);
+        color: white !important;
+    }
+    
     /* Footer */
     .footer {
         text-align: center;
@@ -243,6 +265,22 @@ with col7:
     """, unsafe_allow_html=True)
     
     st.link_button("Acessar App", "https://simuladornivea.streamlit.app/", use_container_width=True)
+
+# App 8: Simulador Poliequipes
+with col8:
+    st.markdown("""
+    <div class="app-card">
+        <div>
+            <div class="app-icon">📈</div>
+            <div class="app-title">Simulador Poliequipes</div>
+            <div class="app-desc">
+                Simulação de investimentos para as equipes Polibras.
+            </div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.link_button("Acessar App", "https://simuladorpolibras.streamlit.app/", use_container_width=True)
 
 # Rodapé
 st.markdown("""
