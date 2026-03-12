@@ -20,34 +20,34 @@ st.markdown("""
     /* Cabeçalho */
     .main-header {
         text-align: center;
-        padding: 2rem 0;
-        margin-bottom: 2rem;
+        padding: 0.6rem 0;
+        margin-bottom: 0.8rem;
     }
     .main-header h1 {
         color: #1a1a1a;
-        font-size: 3.5rem;
+        font-size: 2.2rem;
         font-weight: 800;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.2rem;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
     }
     .main-header p {
         color: #4a4a4a;
-        font-size: 1.2rem;
+        font-size: 0.95rem;
         font-weight: 400;
     }
     .main-header .subtitle {
         color: #4b6cb7;
         font-weight: 600;
-        font-size: 1.5rem;
-        margin-top: -10px;
+        font-size: 1.1rem;
+        margin-top: -6px;
     }
     
     /* Cards dos Apps */
     .app-card {
         background-color: white;
-        border-radius: 20px;
-        padding: 2rem;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        border-radius: 12px;
+        padding: 0.8rem 1rem;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         text-align: center;
         height: 100%;
@@ -58,21 +58,21 @@ st.markdown("""
     }
     
     .app-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        transform: translateY(-6px);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.15);
     }
     
     .app-icon {
-        font-size: 4rem;
-        margin-bottom: 1rem;
+        font-size: 2rem;
+        margin-bottom: 0.3rem;
     }
     
     .app-title {
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: 700;
         color: #2c3e50;
-        margin-bottom: 0.5rem;
-        min-height: 3.6rem;
+        margin-bottom: 0.2rem;
+        min-height: 2.2rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -80,9 +80,9 @@ st.markdown("""
     
     .app-desc {
         color: #7f8c8d;
-        font-size: 0.95rem;
-        margin-bottom: 1.5rem;
-        line-height: 1.5;
+        font-size: 0.78rem;
+        margin-bottom: 0.6rem;
+        line-height: 1.4;
         flex-grow: 1;
     }
     
@@ -91,9 +91,10 @@ st.markdown("""
         background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
         color: white;
         border: none;
-        padding: 0.6rem 1.5rem;
+        padding: 0.35rem 1rem;
         border-radius: 50px;
         font-weight: 600;
+        font-size: 0.8rem;
         transition: all 0.3s ease;
         width: 100%;
     }
@@ -103,15 +104,19 @@ st.markdown("""
         box-shadow: 0 5px 15px rgba(75, 108, 183, 0.4);
     }
     
-    /* st.page_link - iguala visual ao link_button */
-    [data-testid="stPageLink"] a, [data-testid="stPageLink"] a:visited {
-        background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    /* st.link_button e st.page_link — mesma aparência: azul escuro + branco */
+    [data-testid="stLinkButton"] a,
+    [data-testid="stLinkButton"] a:visited,
+    [data-testid="stPageLink"] a,
+    [data-testid="stPageLink"] a:visited {
+        background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%) !important;
         color: white !important;
-        border: none;
-        padding: 0.6rem 1.5rem;
+        border: none !important;
+        padding: 0.35rem 1rem;
         border-radius: 50px;
         font-weight: 600;
-        text-decoration: none;
+        font-size: 0.8rem;
+        text-decoration: none !important;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -119,6 +124,11 @@ st.markdown("""
         transition: all 0.3s ease;
         box-sizing: border-box;
     }
+    [data-testid="stLinkButton"] a *,
+    [data-testid="stPageLink"] a * {
+        color: white !important;
+    }
+    [data-testid="stLinkButton"] a:hover,
     [data-testid="stPageLink"] a:hover {
         transform: scale(1.05);
         box-shadow: 0 5px 15px rgba(75, 108, 183, 0.4);
@@ -128,10 +138,10 @@ st.markdown("""
     /* Footer */
     .footer {
         text-align: center;
-        padding: 2rem;
+        padding: 0.8rem;
         color: #666;
-        font-size: 0.8rem;
-        margin-top: 3rem;
+        font-size: 0.75rem;
+        margin-top: 0.5rem;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -145,8 +155,8 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# Container dos Apps
-col1, col2, col3, col4 = st.columns(4)
+# Container dos Apps — linha 1
+col1, col2, col3 = st.columns(3)
 
 # App 1: Venn Analysis
 with col1:
@@ -161,7 +171,6 @@ with col1:
         </div>
     </div>
     """, unsafe_allow_html=True)
-    
     st.link_button("Acessar App", "https://vennbiz.streamlit.app/", use_container_width=True)
 
 # App 2: Conversor PDF
@@ -177,7 +186,6 @@ with col2:
         </div>
     </div>
     """, unsafe_allow_html=True)
-    
     st.link_button("Acessar App", "https://converter-pdf-excel-biz.streamlit.app/", use_container_width=True)
 
 # App 3: Gerador de Rotas
@@ -193,8 +201,13 @@ with col3:
         </div>
     </div>
     """, unsafe_allow_html=True)
-    
     st.page_link("pages/Gerador_Rotas.py", label="Acessar App", use_container_width=True)
+
+# Espaçamento entre linhas
+st.markdown("<br style='line-height:0.3'>", unsafe_allow_html=True)
+
+# Segunda linha de apps
+col4, col5, col6 = st.columns(3)
 
 # App 4: Biz Net
 with col4:
@@ -209,14 +222,7 @@ with col4:
         </div>
     </div>
     """, unsafe_allow_html=True)
-    
     st.page_link("pages/Biz_Net.py", label="Acessar App", use_container_width=True)
-
-# Espaçamento entre linhas
-st.markdown("<br>", unsafe_allow_html=True)
-
-# Segunda linha de apps
-col5, col6, col7, col8 = st.columns(4)
 
 # App 5: Clientes sem Compra
 with col5:
@@ -231,7 +237,6 @@ with col5:
         </div>
     </div>
     """, unsafe_allow_html=True)
-    
     st.link_button("Acessar App", "https://clientessemcomprasigma.streamlit.app/", use_container_width=True)
 
 # App 6: Consulta CNPJ
@@ -247,8 +252,13 @@ with col6:
         </div>
     </div>
     """, unsafe_allow_html=True)
-    
     st.link_button("Acessar App", "https://cnpjsmgconsulta.streamlit.app/", use_container_width=True)
+
+# Espaçamento entre linhas
+st.markdown("<br style='line-height:0.3'>", unsafe_allow_html=True)
+
+# Terceira linha de apps
+col7, col8, col9 = st.columns(3)
 
 # App 7: Simulador Nivea
 with col7:
@@ -263,7 +273,6 @@ with col7:
         </div>
     </div>
     """, unsafe_allow_html=True)
-    
     st.link_button("Acessar App", "https://simuladornivea.streamlit.app/", use_container_width=True)
 
 # App 8: Simulador Poliequipes
@@ -279,14 +288,7 @@ with col8:
         </div>
     </div>
     """, unsafe_allow_html=True)
-    
     st.link_button("Acessar App", "https://simuladorpolibras.streamlit.app/", use_container_width=True)
-
-# Espaçamento entre linhas
-st.markdown("<br>", unsafe_allow_html=True)
-
-# Terceira linha de apps
-col9, col10, col11, col12 = st.columns(4)
 
 # App 9: Simulador Compra Agora
 with col9:
@@ -301,7 +303,6 @@ with col9:
         </div>
     </div>
     """, unsafe_allow_html=True)
-    
     st.link_button("Acessar App", "https://simuladorcompraagora.streamlit.app/", use_container_width=True)
 
 # Rodapé
