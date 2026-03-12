@@ -282,6 +282,28 @@ with col8:
     
     st.link_button("Acessar App", "https://simuladorpolibras.streamlit.app/", use_container_width=True)
 
+# Espaçamento entre linhas
+st.markdown("<br>", unsafe_allow_html=True)
+
+# Terceira linha de apps
+col9, col10, col11, col12 = st.columns(4)
+
+# App 9: Simulador Compra Agora
+with col9:
+    st.markdown("""
+    <div class="app-card">
+        <div>
+            <div class="app-icon">🛒</div>
+            <div class="app-title">Simulador Compra Agora</div>
+            <div class="app-desc">
+                Simulador para análise e planejamento de compras imediatas.
+            </div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.link_button("Acessar App", "https://simuladorcompraagora.streamlit.app/", use_container_width=True)
+
 # Rodapé
 st.markdown("""
 <div class="footer">
