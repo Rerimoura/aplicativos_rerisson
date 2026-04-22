@@ -305,6 +305,27 @@ with col9:
     """, unsafe_allow_html=True)
     st.link_button("Acessar App", "https://simuladorcompraagora.streamlit.app/", use_container_width=True)
 
+# Espaçamento entre linhas
+st.markdown("<br style='line-height:0.3'>", unsafe_allow_html=True)
+
+# Quarta linha de apps
+col10, col11, col12 = st.columns(3)
+
+# App 10: Busca CNPJ por Endereço
+with col10:
+    st.markdown("""
+    <div class="app-card">
+        <div>
+            <div class="app-icon">📍</div>
+            <div class="app-title">Busca CNPJ por Endereço</div>
+            <div class="app-desc">
+                Buscar todos os CNPJs cadastrados em determinado endereço.
+            </div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Acessar App", "https://buscacnpjmg.streamlit.app/", use_container_width=True)
+
 # Rodapé
 st.markdown("""
 <div class="footer">
