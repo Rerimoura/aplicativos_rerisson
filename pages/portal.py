@@ -326,6 +326,21 @@ with col10:
     """, unsafe_allow_html=True)
     st.link_button("Acessar App", "https://buscacnpjmg.streamlit.app/", use_container_width=True)
 
+# App 11: Roteiro Biz
+with col11:
+    st.markdown("""
+    <div class="app-card">
+        <div>
+            <div class="app-icon">🛣️</div>
+            <div class="app-title">Roteiro Biz</div>
+            <div class="app-desc">
+                Converta seu roteiro em excel no formato Polibras.
+            </div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Acessar App", "https://roteirobiz.streamlit.app/", use_container_width=True)
+
 # Rodapé
 st.markdown("""
 <div class="footer">
